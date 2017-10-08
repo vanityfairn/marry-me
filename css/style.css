@@ -11,7 +11,7 @@
 
 .timeline__content-title {
   font-weight: normal;
-  font-size: 66px;
+  font-size: 100px;
   margin: -10px 0 0 0;
   transition: .4s;
   padding: 0 10px;
@@ -22,12 +22,12 @@
 
 .timeline__content-desc {
   margin: 0;
-  font-size: 15px;
+  font-size: 30px;
   box-sizing: border-box;
   color: rgba(255, 255, 255, 0.7);
   font-family: Cardo;
   font-weight: normal;
-  line-height: 25px;
+  line-height: 40px;
 }
 
 .timeline:before {
@@ -59,7 +59,7 @@
   width: 60px;
   position: absolute;
   color: rgba(255, 255, 255, 0.5);
-  font-size: 13px;
+  font-size: 18px;
   font-family: "Pathway Gothic One", sans-serif;
   border: none !important;
   top: 50px;
@@ -134,7 +134,7 @@
 }
 .timeline-header__title {
   color: #fff;
-  font-size: 46px;
+  font-size: 92px;
   font-family: Cardo;
   font-weight: normal;
   margin: 0;
