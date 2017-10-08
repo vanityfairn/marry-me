@@ -12,7 +12,7 @@
     var itemLength = selectors.item.length;
     $(window).scroll(function() {
       var max, min;
-      var pos = $(this).scrollTop();
+      var pos = $(this).scrollTop() + 50; // start the transition earlier
 
       selectors.item.each(function(i) {
         min = $(this).offset().top;
