@@ -8,6 +8,7 @@
   max-width: 700px;
   position: relative;
 }
+
 .timeline__content-title {
   font-weight: normal;
   font-size: 66px;
@@ -18,6 +19,7 @@
   font-family: "Pathway Gothic One", sans-serif;
   color: #fff;
 }
+
 .timeline__content-desc {
   margin: 0;
   font-size: 15px;
@@ -27,49 +29,52 @@
   font-weight: normal;
   line-height: 25px;
 }
+
 .timeline:before {
   position: absolute;
-  left: 50%;
+  left: 40px;
   width: 2px;
   height: 100%;
   margin-left: -1px;
   content: "";
   background: rgba(255, 255, 255, 0.07);
 }
-@media only screen and (max-width: 767px) {
-  .timeline:before {
-    left: 40px;
-  }
-}
+
 .timeline-item {
-  padding: 40px 0;
+  align-self: baseline !important;
+  padding: 0 30px 150px 80px;
   opacity: .3;
   filter: blur(2px);
   transition: .5s;
   box-sizing: border-box;
-  width: calc(50% - 40px);
+  width: 100%
   display: flex;
   position: relative;
   transform: translateY(-80px);
 }
+
 .timeline-item:before {
   content: attr(data-text);
   letter-spacing: 3px;
-  width: 100%;
+  width: 60px;
   position: absolute;
   color: rgba(255, 255, 255, 0.5);
   font-size: 13px;
   font-family: "Pathway Gothic One", sans-serif;
-  border-left: 2px solid rgba(255, 255, 255, 0.5);
-  top: 70%;
+  border: none !important;
+  top: 50px;
   margin-top: -5px;
-  padding-left: 15px;
+  padding: 0 !important;
   opacity: 0;
   right: calc(-100% - 56px);
+  left: 10px !important;
+  text-align: center !important;
 }
+
 .timeline-item:nth-child(even) {
   align-self: flex-end;
 }
+
 .timeline-item:nth-child(even):before {
   right: auto;
   text-align: right;
@@ -79,37 +84,27 @@
   border-right: 2px solid rgba(255, 255, 255, 0.5);
   padding-right: 15px;
 }
+
+.timeline-item:last-child {
+  padding-bottom: 40px;
+}
+
 .timeline-item--active {
   opacity: 1;
   transform: translateY(0);
   filter: blur(0px);
 }
+
 .timeline-item--active:before {
   top: 50%;
   transition: .3s all .2s;
   opacity: 1;
 }
+
 .timeline-item--active .timeline__content-title {
   margin: -50px 0 20px 0;
 }
-@media only screen and (max-width: 767px) {
-  .timeline-item {
-    align-self: baseline !important;
-    width: 100%;
-    padding: 0 30px 150px 80px;
-  }
-  .timeline-item:before {
-    left: 10px !important;
-    padding: 0 !important;
-    top: 50px;
-    text-align: center !important;
-    width: 60px;
-    border: none !important;
-  }
-  .timeline-item:last-child {
-    padding-bottom: 40px;
-  }
-}
+
 .timeline__img {
   max-width: 100%;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
